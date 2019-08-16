@@ -38,23 +38,33 @@ math.sqrt(350)
 math.exp(2)
 math.pow(2.718281828459045,2)
 math.pow(35,9)
-(35**9)
-math.pi
+(35**
 
-import math
-dir(mathn)
+ studentlistdf=[["Steve",32,"M"],["Lia",28,"F"]]
+import pandas
 
-chocolate1 = {"milk":5}
-chocolate2 = {"dark":6}
-chocolate3 = {"white":8}
+studentlistdf = pandas.DataFrame(studentlistdf,columns=["name","age","gender"])
+studentlistdf
 
-chocolatebox = {"milk":5,"dark":6,"white":8}
-chocolatebox
+import plotly
+from plotly.offline import plot
+import plotly.graph_objs as go 
 
-import pandas 
-dir(pandas)
+agename = go.Bar(x=studentlistdf["name"] ,y=studentlistdf["age"])
+plot([agename])
 
-studentinfo=[["Steve",32,"M"],["Lia",28,"F"]]
+import plotly 
+from plotly.offline import plot
+import plotly.graph_objs as go 
 
-studentdf = pandas.DataFrame(studentinfo,columns=("name","age","gender"))
-studentdf
+wodf = pandas.read_excel("GISdata.xlsx",sheet_name = "womenOccupation")
+wodf
+
+womenoccupation = go.Bar(x= wodf['occupation", y=wodf["women"],
+                        marker = {"color' : ["women"],
+                                  'colorscale" ; "rainbow"})
+    
+    plot([womenoccupation])
+titles = go.layout(titlec = "percentage of women employed by occupation",
+                   xaxis= go.layout.XAxis(title = go.layout.yaxis.title(text = occupation",)
+                                          (text = "percentage")
